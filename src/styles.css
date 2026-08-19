@@ -1,0 +1,371 @@
+:root {
+  color: #111827;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f4f6fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background:
+    linear-gradient(120deg, rgba(14, 42, 100, 0.07) 0 1px, transparent 1px 42px),
+    linear-gradient(60deg, rgba(204, 24, 38, 0.08) 0 1px, transparent 1px 46px),
+    #f4f6fb;
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 28px;
+}
+
+.navbar {
+  align-items: center;
+  background: #061a3a;
+  border: 2px solid #d51f2a;
+  border-radius: 8px;
+  box-shadow: 0 16px 34px rgba(6, 26, 58, 0.2);
+  display: flex;
+  gap: 12px;
+  margin: 0 auto 28px;
+  max-width: 1160px;
+  padding: 14px;
+}
+
+.navbar::before {
+  color: #ffffff;
+  content: "React Activity Portal";
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-right: auto;
+  white-space: nowrap;
+}
+
+.nav-link {
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  color: #e8eefc;
+  cursor: pointer;
+  min-height: 42px;
+  padding: 0 16px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: #d51f2a;
+  color: #ffffff;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1160px;
+}
+
+.hero,
+.page-panel {
+  background: #ffffff;
+  border: 1px solid #cad6ea;
+  border-radius: 8px;
+  box-shadow: 0 18px 40px rgba(6, 26, 58, 0.12);
+  padding: 34px;
+}
+
+.hero {
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.1) 0 1px, transparent 1px 62px),
+    linear-gradient(60deg, rgba(255, 255, 255, 0.1) 0 1px, transparent 1px 62px),
+    radial-gradient(circle at 88% 8%, rgba(213, 31, 42, 0.36) 0 16%, transparent 17%),
+    linear-gradient(135deg, #061a3a 0%, #0f3474 52%, #f8fbff 52%);
+  color: #ffffff;
+  min-height: 640px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero::after {
+  background: #d51f2a;
+  content: "";
+  height: 8px;
+  left: -8%;
+  position: absolute;
+  right: 36%;
+  top: 0;
+}
+
+.eyebrow {
+  color: #d51f2a;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.hero .eyebrow,
+.hero-copy {
+  color: #ffffff;
+}
+
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 4.2rem);
+  line-height: 1;
+  max-width: 720px;
+}
+
+h2 {
+  font-size: 1.35rem;
+}
+
+p {
+  line-height: 1.7;
+}
+
+.hero-copy {
+  font-size: 1.2rem;
+  max-width: 620px;
+}
+
+.student-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 22px 0 10px;
+  max-width: 760px;
+}
+
+.student-meta span {
+  background: rgba(213, 31, 42, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  color: #ffffff;
+  font-weight: 800;
+  line-height: 1;
+  padding: 11px 14px;
+}
+
+.overview-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-left: auto;
+  margin-top: 86px;
+  max-width: 560px;
+}
+
+.overview-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #cad6ea;
+  border-radius: 8px;
+  color: #061a3a;
+  min-height: 148px;
+  padding: 20px;
+}
+
+.overview-card p {
+  color: #455b80;
+  margin-bottom: 0;
+}
+
+.activity-number {
+  align-items: center;
+  background: #d51f2a;
+  border-radius: 50%;
+  color: #ffffff;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-size: 1.2rem;
+  font-weight: 800;
+  height: 48px;
+  justify-content: center;
+  margin-bottom: 16px;
+  width: 48px;
+}
+
+.activity-number.teal {
+  background: #0f3474;
+}
+
+.teal-text {
+  color: #0f3474;
+}
+
+.page-heading {
+  align-items: center;
+  display: flex;
+  gap: 18px;
+  margin-bottom: 26px;
+}
+
+.page-heading .activity-number {
+  margin-bottom: 0;
+}
+
+.page-heading p:last-child {
+  color: #455b80;
+  font-style: italic;
+  margin: 8px 0 0;
+}
+
+.activity-layout {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(280px, 1fr) minmax(280px, 0.86fr);
+}
+
+.form-card,
+.result-card {
+  border-radius: 8px;
+  min-height: 360px;
+  padding: 26px;
+}
+
+.form-card {
+  background: #eaf0fd;
+  border: 1px solid #cad6ea;
+}
+
+.result-card {
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.09) 0 1px, transparent 1px 42px),
+    linear-gradient(60deg, rgba(255, 255, 255, 0.09) 0 1px, transparent 1px 42px),
+    #061a3a;
+  border: 2px solid #d51f2a;
+  color: #ffffff;
+}
+
+.result-label {
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+label {
+  display: block;
+  font-weight: 800;
+  margin: 16px 0 8px;
+}
+
+input {
+  background: #ffffff;
+  border: 1px solid #9db1d0;
+  border-radius: 6px;
+  min-height: 46px;
+  outline: none;
+  padding: 0 14px;
+  width: 100%;
+}
+
+input:focus {
+  border-color: #d51f2a;
+  box-shadow: 0 0 0 3px rgba(213, 31, 42, 0.18);
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.primary-button,
+.secondary-button {
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 800;
+  min-height: 46px;
+  padding: 0 18px;
+}
+
+.primary-button {
+  background: #d51f2a;
+  color: #ffffff;
+  margin-top: 22px;
+}
+
+.button-row .primary-button {
+  margin-top: 0;
+}
+
+.teal-button {
+  background: #0f3474;
+}
+
+.secondary-button {
+  background: #ffffff;
+  color: #061a3a;
+}
+
+.strength-track {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  height: 16px;
+  margin-top: 28px;
+  overflow: hidden;
+}
+
+.strength-track span {
+  background: #d51f2a;
+  display: block;
+  height: 100%;
+  transition: width 0.2s ease;
+}
+
+@media (max-width: 860px) {
+  .app {
+    padding: 16px;
+  }
+
+  .navbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .navbar::before {
+    margin: 0 0 4px;
+  }
+
+  .overview-grid,
+  .activity-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero,
+  .page-panel {
+    padding: 24px;
+  }
+
+  .hero {
+    background:
+      linear-gradient(120deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 48px),
+      linear-gradient(60deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 48px),
+      #061a3a;
+  }
+
+  .overview-grid {
+    margin-top: 36px;
+    max-width: none;
+  }
+
+  .page-heading {
+    align-items: flex-start;
+  }
+}
